@@ -12,8 +12,11 @@ export function CalendarDemo() {
         mode="single"
         selected={date}
         onSelect={setDate}
-        className="rounded-md border shadow"
+        className="rounded-md border shadow bg-black"
       />
+      {/* <p className="mt-4 text-white">
+        Selected Date: {date ? date.toDateString() : "None"}
+      </p> */}
     </>
   );
 }
