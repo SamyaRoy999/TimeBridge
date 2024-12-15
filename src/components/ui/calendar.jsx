@@ -1,5 +1,4 @@
 import * as React from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { DayPicker } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
@@ -31,7 +30,7 @@ function Calendar({ className, classNames, showOutsideDays = true, ...props }) {
             months:
               "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
             month: "space-y-4",
-            caption: "hidden", // Hides the default caption (month and year display)
+            caption: "hidden",
             table: "w-full border-collapse space-y-1",
             head_row: "flex",
             head_cell:
