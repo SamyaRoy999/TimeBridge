@@ -4,6 +4,8 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { useRef, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export function CalendarDemo({ sendDataToModal }) {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -39,7 +41,7 @@ export function CalendarDemo({ sendDataToModal }) {
       !eventFormRef.current.startTime ||
       !eventFormRef.current.endTime
     ) {
-      alert("Event name and time fields are required!");
+      toast.error("Event name, start time, and end time are required!");
       return;
     }
 
@@ -48,11 +50,15 @@ export function CalendarDemo({ sendDataToModal }) {
       date: selectedDate?.toDateString(),
     };
     sendDataToModal(newEvent);
-    closeModal();
+    toast.success("Event added successfully!", {
+      onClose: () => closeModal(), // Toast বন্ধ হলে Modalও বন্ধ হবে
+    });
   };
 
   return (
     <div className="flex flex-col items-center p-4">
+      <ToastContainer />
+
       {/* Calendar Component */}
       <Calendar
         mode="single"
@@ -68,7 +74,6 @@ export function CalendarDemo({ sendDataToModal }) {
               <h2 className="text-lg font-bold mb-4">
                 {selectedDate?.toDateString()}
               </h2>
-              {/* Event Name */}
               <label>Event Name</label>
               <Input
                 type="text"
@@ -76,7 +81,6 @@ export function CalendarDemo({ sendDataToModal }) {
                 onChange={(e) => (eventFormRef.current.name = e.target.value)}
                 className="border p-2 mb-2 w-full bg-[#18181B]"
               />
-              {/* Start Time */}
               <label>Start Time</label>
               <Input
                 type="time"
@@ -85,7 +89,6 @@ export function CalendarDemo({ sendDataToModal }) {
                 }
                 className="border p-2 mb-5 w-full bg-[#18181B]"
               />
-              {/* End Time */}
               <label>End Time</label>
               <Input
                 type="time"
@@ -94,7 +97,6 @@ export function CalendarDemo({ sendDataToModal }) {
                 }
                 className="border p-2 mb-5 w-full bg-[#18181B]"
               />
-              {/* Description */}
               <label>Description</label>
               <textarea
                 placeholder="Enter event description"
@@ -103,7 +105,6 @@ export function CalendarDemo({ sendDataToModal }) {
                 }
                 className="border p-2 mb-5 w-full bg-[#18181B]"
               />
-              {/* Modal Buttons */}
               <div className="flex justify-end space-x-4">
                 <Button variant="outline" onClick={closeModal}>
                   Cancel
