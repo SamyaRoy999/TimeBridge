@@ -43,8 +43,7 @@ This project is a feature-rich **Dynamic Event Calendar Application** built usin
 
 ### Installation
 
-1. Clone the repository:
-   ```bash https://github.com/SamyaRoy999/TimeBridge.git
+1. Clone the repository: bash https://github.com/SamyaRoy999/TimeBridge.git
    ```
 
 2. Navigate to the project directory:
