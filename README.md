@@ -26,16 +26,11 @@ This project is a feature-rich **Dynamic Event Calendar Application** built usin
 4. **Data Persistence**:
    - Events are saved using **localStorage**, ensuring they persist between page refreshes.
 
-### Bonus Features
-- Drag-and-drop functionality to reschedule events between days.
-- Color-coded events based on categories (e.g., work, personal, others).
-- Export events for a specific month as a **JSON** or **CSV** file.
-
 ## Technologies Used
 
 - **Frontend**: React.js with functional components and hooks
 - **UI Components**: [shadcn](https://shadcn.dev/) for a modern and clean design
-- **State Management**: React's useState and useEffect hooks
+- **State Management**: React's useState , useEffect, useRef hooks 
 - **Persistence**: localStorage for data storage
 - **Deployment**: Deployed on [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/)
 
@@ -50,7 +45,7 @@ This project is a feature-rich **Dynamic Event Calendar Application** built usin
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/dynamic-event-calendar.git
+  https://github.com/SamyaRoy999/TimeBridge.git
    ```
 
 2. Navigate to the project directory:
@@ -67,9 +62,7 @@ This project is a feature-rich **Dynamic Event Calendar Application** built usin
 
 4. Start the development server:
    ```bash
-   npm start
-   # or
-   yarn start
+   npm run dev
    ```
 
 5. Open the application in your browser at:
@@ -91,29 +84,6 @@ This project is a feature-rich **Dynamic Event Calendar Application** built usin
 3. **Navigate Between Months**:
    - Use the "Previous" and "Next" buttons to switch months.
 
-4. **Filter Events** (if implemented):
-   - Use the search bar to filter events by keyword.
-
-5. **Export Events** (if implemented):
-   - Export events as a JSON or CSV file for a specific month.
-
-## Folder Structure
-
-```
-src/
-├── components/
-│   ├── Calendar.js
-│   ├── EventModal.js
-│   ├── EventList.js
-│   └── UI/ (shadcn components)
-├── utils/
-│   ├── calendarLogic.js
-│   └── eventHelpers.js
-├── App.js
-├── index.js
-└── styles/
-    └── main.css
-```
 
 ## Deployment
 
@@ -131,22 +101,4 @@ To run the project locally, follow the installation instructions above.
   - No support for recurring events.
   - Drag-and-drop feature is in progress.
 
-- **Planned Improvements**:
-  - Add recurring events.
-  - Optimize performance for large event data.
-  - Integrate backend for multi-user support.
-
-## Author
-
-- **Name**: Your Name
-- **GitHub**: [your-github-profile](https://github.com/your-username)
-- **Email**: your-email@example.com
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Feedback
-
-If you have any feedback, feel free to open an issue or reach out via email.
 
