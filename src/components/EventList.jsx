@@ -11,10 +11,15 @@ const EventList = ({ allEvents }) => {
             key={index}
             className="text-white mb-2 border bg-[#18181B] p-3 m-2"
           >
-            <p>({event.date})</p>
-            <h5>Event name: {event.name}</h5>
-            <p>{event.description}</p>
-            <p>
+            <p className="mb-1">({event.date})</p>
+            <h5 className="mb-1">
+              Event name: <span className="text-gray-400">{event.name}</span>
+            </h5>
+            <p className="mb-1">
+              Description:
+              <span className="text-gray-400"> {event.description}</span>
+            </p>
+            <p className="mb-1">
               {event.startTime} to {event.endTime}
             </p>
           </li>
